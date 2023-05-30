@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    background-color: coral;
+  
+}
+nav{
+    max-width: 1200px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+header nav ul li a{
+    padding: 2rem;
+    display: block;
+}
+label,select{
+   margin-right: auto;
+}
+
+img{
+    width:200px;
+    height: 200px;
+    padding-left: 2rem;
+}
+#foot, #tennis, #basket, #boxe{
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    
+}
+section{
+    max-width: 1200px;
+    width: 100%;
+    
+}
+h2{
+    margin-top: 3rem;
+    margin-left: 10rem;
+}
+.visible{
+    display: block;
+}
+.invisible{
+    display: none;
+}
+@media screen and (max-width:1024px){
+   header{
+    padding: 2rem;
+   }
+    li{
+        display: none;
+    }
+    #burger {
+        width:30px;
+        height:2px;
+        background:white;
+        display:inline-block;
+        position:relative;
+      }
+      #burger::before,
+#burger::after {
+  content:'';
+  width:30px;
+  height:2px;
+  background:white;
+  display:inline-block;
+  position:absolute;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+#burger::before {
+  top:-7px;
+}
+#burger::after {
+  top:7px;
+}
+#burger.open {
+    background:transparent; /* la barre du milieu disparait */
+  }
+  /* celles du haut et du bas s'inclinent pour former une croix */
+  #burger.open::before {
+    transform: rotate(45deg); 
+    top:0;
+  }
+  #burger.open::after {
+    transform: rotate(-45deg);
+    top:0;
+  }
+  ul.open {
+    transform:scaleY(1);
+  }
+  ul li {
+    padding:10px 0;
+    text-align:center
+  }
+
+
+}
