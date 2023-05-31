@@ -1,104 +1,113 @@
-*{
-    margin: 0;
-    padding: 0;
+
+* {
+ margin: 0;
+ padding: 0;
 }
 header{
-    width: 100%;
-    background-color: coral;
-  
+  width: 100%;
+  background-color: blueviolet;
 }
-nav{
-    max-width: 1200px;
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
 }
-ul{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
+header nav ul{
+  display: flex;
+  list-style: none;
 }
-header nav ul li a{
-    padding: 2rem;
-    display: block;
+header nav a{
+  display: block;
+  padding: 2rem;
 }
-label,select{
-   margin-right: auto;
+header nav button{
+  width: 35px;
+  height: 25px;
+}
+body {
+  margin: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+select{
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 img{
-    width:200px;
-    height: 200px;
-    padding-left: 2rem;
+  width:200px;
+  height: 200px;
+  padding-left: 2rem;
 }
 #foot, #tennis, #basket, #boxe{
-    text-align: center;
+  text-align: center;
     padding-top: 0.5rem;
     padding-bottom: 2rem;
     
-}
-section{
-    max-width: 1200px;
-    width: 100%;
-    
-}
-h2{
+  }
+  section{
+    width: 100%; 
+  }
+  h2{
     margin-top: 3rem;
-    margin-left: 10rem;
-}
-.visible{
+    text-align: center;
+  }
+  .visible{
     display: block;
-}
-.invisible{
+  }
+  .invisible{
     display: none;
-}
-@media screen and (max-width:1024px){
-   header{
-    padding: 2rem;
-   }
-    li{
-        display: none;
+  }
+  @media screen and (max-width:1024px){
+    header nav p{
+      padding: 1rem;
     }
-    #burger {
-        width:30px;
-        height:2px;
-        background:white;
-        display:inline-block;
-        position:relative;
-      }
-      #burger::before,
-#burger::after {
-  content:'';
-  width:30px;
-  height:2px;
-  background:white;
-  display:inline-block;
-  position:absolute;
-  transform-origin: center;
-  transition: all 0.3s ease;
-}
-#burger::before {
-  top:-7px;
-}
-#burger::after {
-  top:7px;
-}
-#burger.open {
-    background:transparent; /* la barre du milieu disparait */
-  }
-  /* celles du haut et du bas s'inclinent pour former une croix */
-  #burger.open::before {
-    transform: rotate(45deg); 
-    top:0;
-  }
-  #burger.open::after {
-    transform: rotate(-45deg);
-    top:0;
-  }
-  ul.open {
-    transform:scaleY(1);
-  }
-  ul li {
-    padding:10px 0;
-    text-align:center
-  }
+    header nav{
+      display: block;
+      position: relative;
+    }
+    header nav ul{
+      display: none;
+    }
+    header ul.active{
+      display: block;
+    }
+    header nav button{
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      border-radius: none;
+      border: none;
+      cursor: pointer;
+      border-top: 3px solid black;
+      border-bottom: 3px solid black;
+      background: transparent;
+    }
+    header nav button::after, header nav button::before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 3px;
+      background-color: black;
+      width: 100%;
 
-
-}
+    }
+    header nav button.active{
+      border:none;
+    }
+    header nav button::after{
+      transform: translate(-50%, -50%) rotateZ(30deg);
+    }
+    header nav button::after{
+      transform: translate(-50%, -50%) rotateZ(30deg);
+    }
+  }

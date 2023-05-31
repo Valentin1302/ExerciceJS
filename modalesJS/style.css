@@ -1,0 +1,23 @@
+#voile{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: black;
+    opacity: 50%;
+}
+#modal{
+    position: absolute;
+}
+  button{
+    background-color: salmon;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+  }
+
+  button:hover{
+    padding: 1rem 2.5rem;
+    transition: 0.25s;
+  }

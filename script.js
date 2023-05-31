@@ -33,13 +33,33 @@
         })
     })
 
-    let link = document.querySelector('link')
-    let burgerMenu = document.querySelector('burger')
-    let list = document.querySelector('ul')
+    // gérer la redimensionnement de la feneter
+    // gerer le chargement de la fenetre
+    // Dans les deux cas, controler que la largeur est < 1025
 
-    link.addEventListener("click", (evt)=>{
-     evt.preventDefault()
+    // Ajouter un élément HTML dans la section de navigation
+    burgerIcon =  document.createElement('button')
 
-     burgerMenu.classList.toggle("open");
-     list.classList.toggle("open")
+    const navBar = document.querySelector("header nav");
+    
+    // Recupere l'element UL
+    const onglets = document.querySelector("header nav ul")
+    // Injecter dans la nav
+    navBar.appendChild(burgerIcon);
+
+    // Gestion du click sur le burgerIcon
+    burgerIcon.addEventListener('click', ()=>{
+        onglets.classList.toggle("active")
+    });
+
+    // Gérer le redimensionnement de la fenetre
+
+    window.addEventListener("load", ()=>{
+        if(window.innerWidth <1025){
+            // injecte le burgerIcon
+            navBar.appendChild(burgerIcon);
+        }
+        else{
+            burgerIcon.remove();
+        }
     })
