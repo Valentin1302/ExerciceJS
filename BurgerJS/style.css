@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    background: teal;
+}
+nav{
+    margin: auto;
+    max-width: 1200px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+header nav p{
+    padding: 2rem 1rem;
+}
+a{
+    text-decoration: none;
+    display: block;
+    padding: 2rem;
+    color: darkmagenta;
+}
+a:hover{
+    text-decoration: underline darkgoldenrod;
+}
+@media screen and (max-width: 1024px){
+    header nav ul{
+        display: none;
+    }
+
+    nav{
+        display: block;
+        text-align: left;
+    }
+    .open{
+        display: block;
+    }
+    button::before, button::after{
+        right: 0;
+        background-color: black;
+        content: "";
+        position: absolute;
+        height: 3px;
+        width:100%;
+    }
+    button{
+        border: none;
+        background: transparent;
+        border-top:3px solid black ;
+        border-bottom:3px solid black ;
+        cursor: pointer;
+        padding:1rem 2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    button.active{
+        border: none;
+    }
+
+    button.active::before{
+        transform: rotateZ(45deg);
+    }
+
+    button.active::after{
+        transform: rotateZ(-45deg);
+    }
+}

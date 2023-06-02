@@ -1,4 +1,33 @@
-.sidenav {
+header{
+  width: 100%;
+  background-color: royalblue;
+}
+nav{
+  max-width: 1200px;
+}
+ul{
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  
+  .sidenav {
     height: 100%;
     width: 250px;
     position: fixed;
@@ -50,3 +79,4 @@
     background-color: black;
     margin: 6px 0;
   }
+}
