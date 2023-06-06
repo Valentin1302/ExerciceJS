@@ -7,6 +7,53 @@ html {
   font-size: 18px;
 }
 
+#voile {
+  z-index: 10000;
+  background-color: rgba(15, 15, 15, 0.2039215686);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+#buttonModal {
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+}
+
+#buttonRight {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#buttonLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 header {
   width: 100%;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
@@ -52,23 +99,22 @@ main section {
   flex-wrap: wrap;
 }
 main section div {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
   width: 33%;
   box-sizing: border-box;
   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
-main section div img {
+main section div .img {
   width: 100%;
-  height: 424px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 main section div .loupe {
-  position: absolute;
   right: 0;
   bottom: 0;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
 }
 main section div h2 {
   text-transform: uppercase;
@@ -100,10 +146,10 @@ footer {
   header nav ul {
     display: none;
   }
-  header nav button {
-    position: absolute;
-    height: 25px;
+  header nav #buttonBurger {
     width: 15px;
+    height: 25px;
+    position: absolute;
     padding: 1rem 1.5rem;
     border: none;
     border-top: 3px solid black;
@@ -112,26 +158,32 @@ footer {
     right: 0.5rem;
     top: 1rem;
     cursor: pointer;
+    transform: rotateZ(0deg);
   }
-  header nav button::before, header nav button::after {
-    right: 0;
-    background-color: black;
+  header nav #buttonBurger::before,
+  header nav #buttonBurger::after {
     content: "";
-    position: absolute;
     height: 2px;
     width: 100%;
+    right: 0;
+    position: absolute;
+    background-color: black;
   }
   header nav .active {
     border: none;
   }
   header nav .active::before {
     transform: rotateZ(45deg);
+    border-top: none;
+    border-bottom: none;
   }
   header nav .active::after {
     transform: rotateZ(-45deg);
   }
   header nav .open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background-color: #ECECEC;
   }
   main section div {
