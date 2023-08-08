@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Projet en Front-End à réaliser le 02/06/2023">
     <link rel="stylesheet" href="./webfiles/sass/style.css">
+    <link href="./webfiles/js/aos-master/dist/aos.css" rel="stylesheet">
+    <script src="./webfiles/js/splide-4.1.3/dist/js/splide-renderer.min.js" defer></script>
+    <link rel="stylesheet" href="./webfiles/js/splide-4.1.3/dist/css/splide-core.min.css">
     <script src="./webfiles/js/script.js" defer></script>
     <title>Projet Front</title>
 </head>
@@ -29,7 +32,7 @@
         <h1>Nos produits :</h1>
         <section class="firstLine">
             <div>
-                <div class="img">
+                <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/flashBack.png" alt="Image du livre flashBack">
                     <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
@@ -38,7 +41,7 @@
                     sorcières à Templeuve ? Qu’il existe un Roubaix dans le Dakota du Sud...</p>
             </div>
             <div>
-                <div class="img">
+                <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/Phaidon.png" alt="Image du livre Phaidon:L'amour">
                     <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
@@ -49,7 +52,7 @@
                     leur propre expérience à ce qui y est exprimé.</p>
             </div>
             <div>
-                <div class="img">
+                <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/HarryPotter.png" alt="Image du livre HarryPotter">
                     <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
@@ -61,7 +64,7 @@
 
 
             <div>
-                <div class="img">
+                <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/amitié.png" alt="Image du livre Phaidon:L'amitié">
                     <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
@@ -71,7 +74,7 @@
                     Les relations amicales figurent parmi les plus importantes que nous entretenons.</p>
             </div>
             <div>
-                <div class="img">
+                <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/palmBeach.png" alt="Image du livre PalmBeach">
                     <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
@@ -80,7 +83,7 @@
                     iconiques de Palm Beach, en Floride.</p>
             </div>
             <div>
-                <div class="img">
+                <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/miami.png" alt="Image du livre miamiBeach">
                     <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
@@ -91,7 +94,7 @@
             </div>
 
             <div>
-                <div class="img">
+                <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/greek.png" alt="Image du livre Greek Islands">
                     <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
@@ -101,7 +104,7 @@
                     imprégnées d'un sens séduisant de l'histoire, de la tradition et de l'aventure.</p>
             </div>
             <div>
-                <div class="img">
+                <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/nodeJS.png" alt="Image du livre NodeJS">
                     <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
@@ -111,7 +114,7 @@
                     nos experts.</p>
             </div>
             <div>
-                <div class="img">
+                <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/php.png" alt="Image du livre de PHP">
                     <img data-author="Michel" data-price="140euros" data-dispo="27" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
@@ -126,6 +129,10 @@
     <footer>
         Intégré par GAUTIER Valentin.
     </footer>
+    <script src="./webfiles/js/aos-master/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

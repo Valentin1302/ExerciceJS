@@ -1,0 +1,38 @@
+#voile {
+    z-index: 10000;
+    background-color: #0f0f0f34;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+#textModale{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    border-radius: 100%;
+    padding: 2rem;
+    
+}
+.visible{
+ position: fixed;
+ padding: 1rem;
+ background-color: red;
+ border-radius: 100%;
+ color: white;
+ bottom: 2rem;
+ right: 2rem;
+ transform: rotate(90deg);
+ cursor: pointer;
+}
+

@@ -1,0 +1,24 @@
+main{
+    max-width: 750px;
+    margin: auto;
+}
+h1{
+    font-size: 8rem;
+    text-align: center;
+}
+h2{
+    font-size: 4rem;
+}
+p{
+    font-size: 2rem;
+}
+#last{
+    opacity:0;
+}
+#last.visible{
+    opacity:100%;
+    transition: 2s;
+}
+img{
+    width: 200px;
+}
