@@ -15,26 +15,41 @@
 </head>
 
 <body>
-    <header>
-        <nav class>
-
-            <img class="logo" src="./src/img/Logo.png" alt="image du logo">
-
+    <header id="root">
+        <div id="topnav" class="topnav">
+          <a id="home_link" class="topnav_link" href="/">LIVRESINFOS</a>
+      
+          <!-- Classic Menu -->
+          <div role="navigation" id="topnav_menu"></div>
+      
+          <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+            <!-- Some spans to act as a hamburger -->
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+      
+          <!-- Responsive Menu -->
+          <nav role="navigation" id="topnav_responsive_menu">
             <ul>
-                <li><a href="">Onglet 1</a></li>
-                <li><a href="">Onglet 2</a></li>
-                <li><a href="">Onglet 3</a></li>
-                <li><a href="">Onglet 4</a></li>
+              <li><a href="/">HTML</a></li>
+              <li><a href="/about">CSS</a></li>
+              <li><a href="/contact-us">JavaScript</a></li>
+              <li><a href="/privacy-policy">Politique de confidentialité</a></li>
+              <li><a href="/terms-and-conditions">Newsletter</a></li>
             </ul>
-        </nav>
+          </nav>
+        </div>
     </header>
+   
+
     <main>
         <h1>Nos produits :</h1>
         <section class="firstLine">
             <div>
                 <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/flashBack.png" alt="Image du livre flashBack">
-                    <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
+                    <img data-author="Michel" data-price="Gratuit" data-dispo="15/02/24" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
                 <h2>flashBack by vozer</h2>
                 <p>Vous saviez que Jeanne de Flandre a été une femme particulièrement badass ? Qu’on brûlait les
@@ -43,7 +58,7 @@
             <div>
                 <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/Phaidon.png" alt="Image du livre Phaidon:L'amour">
-                    <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
+                    <img data-author="Michel" data-price="Gratuit" data-dispo="Sortie : 15/02/24" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
                 <h2>Phaidon:L'amour</h2>
                 <p>Le premier d’une collection de livres d’initiation aux beaux-arts à destination des jeunes enfants,
@@ -54,7 +69,7 @@
             <div>
                 <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/HarryPotter.png" alt="Image du livre HarryPotter">
-                    <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
+                    <img data-author="Michel" data-price="Gratuit" data-dispo="Sortie : 15/02/24" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
                 <h2>Harry Potter tome 1</h2>
                 <p>Le jour de ses onze ans, Harry Potter, un orphelin élevé par un oncle et une tante qui le détestent,
@@ -66,7 +81,7 @@
             <div>
                 <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/amitié.png" alt="Image du livre Phaidon:L'amitié">
-                    <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
+                    <img data-author="Michel" data-price="Gratuit" data-dispo="Sortie : 15/02/24" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
                 <h2>Phaidon: L'amitié</h2>
                 <p>Les amis sont un élément important de la vie sociale des tout-petits… et maintenant, ils font partie
@@ -76,7 +91,7 @@
             <div>
                 <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/palmBeach.png" alt="Image du livre PalmBeach">
-                    <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
+                    <img data-author="Michel" data-price="Gratuit" data-dispo="Sortie : 15/02/24" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
                 <h2>Palm Beach</h2>
                 <p>Livre illustré à propos de la ville Palm Beach. L’auteur nous emmène dans les lieux les plus
@@ -85,7 +100,7 @@
             <div>
                 <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/miami.png" alt="Image du livre miamiBeach">
-                    <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
+                    <img data-author="Michel" data-price="Gratuit" data-dispo="Sortie : 15/02/24" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
                 <h2>Miami Beach</h2>
                 <p>Considéré comme la ville la plus dynamique et sexy du pays, Miami est plus populaire que jamais.
@@ -96,7 +111,7 @@
             <div>
                 <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/greek.png" alt="Image du livre Greek Islands">
-                    <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
+                    <img data-author="Michel" data-price="Gratuit" data-dispo="Sortie : 15/02/24" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
                 <h2>Greeks Islands</h2>
                 <p>Dans ce volume découvrez l'étendue infinie d'eaux chatoyantes associée à une hospitalité grecque
@@ -106,7 +121,7 @@
             <div>
                 <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/nodeJS.png" alt="Image du livre NodeJS">
-                    <img data-author="Michel" data-price="Gratuit" data-dispo="15" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
+                    <img data-author="Michel" data-price="Gratuit" data-dispo="Sortie : 15/02/24" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
                 <h2>node.js & angular.js</h2>
                 <p>Ces deux livres offrent au lecteur un maximum d'informations sur les frameworks Node.js et AngularJS
@@ -116,7 +131,7 @@
             <div>
                 <div class="img" data-aos="fade-up">
                     <img class="imgBook" src="./src/img/php.png" alt="Image du livre de PHP">
-                    <img data-author="Michel" data-price="140euros" data-dispo="27" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
+                    <img data-author="Michel" data-price="140euros" data-dispo="Sortie : 15/02/24" class="loupe" src="./src/img/Vector.png" alt="image d'une loupe">
                 </div>
                 <h2>php</h2>
                 <p>PHP est toujours aussi populaire qu’en 2023 que durant les années précédentes.
